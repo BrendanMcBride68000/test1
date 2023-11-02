@@ -3,14 +3,21 @@
 class ResistorCapacitor (object):
     """Model a resistor-capacitor network"""
     def __init__(self, resistance, capacitance, initial=0.0):
-        return
+        self.resistance = resistance
+        self.capacitance = capacitance
+        self.initial_voltage = initial
 
     #
     # Mutator methods
     #
     def set_voltage(self, voltage):
         """Set the voltage."""
-        return
+        self.initial_voltage = voltage
+
+    def voltage(self, time):
+        if time < 0:
+            raise ValueError("Time can't be negative.")
+        return self.initial_voltage * (1 - 2.718 ** (-time / (self.resistance * self.capacitance)))
 
 
 ## Test code (place at bottom of the file)
