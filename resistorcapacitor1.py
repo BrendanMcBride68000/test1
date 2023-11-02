@@ -1,4 +1,6 @@
-"""TPRG2131 Winter 202x RC class starter with simplistic test code."""
+"""TPRG2131 Winter 202x RC class starter with simplistic test code.
+Brendan McBride
+"""
 
 class ResistorCapacitor (object):
     """Model a resistor-capacitor network"""
